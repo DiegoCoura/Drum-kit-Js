@@ -1,24 +1,16 @@
 const key = document.querySelectorAll(".key");
 
-for (i of key ){
-  i.addEventListener("click", function(event){
-    let keyLetter = (event.target.className).charAt(0);
-    console.log(event.target.className);
-    makeSound(keyLetter);
-    buttonAnimation(keyLetter);
-  })
-}
+key.forEach(i => i.addEventListener('click', function (event) {
+  let keyLetter = (event.target.className).charAt(0);
+  console.log(event.target.className);
+  makeSound(keyLetter);
+  buttonAnimation(keyLetter);
+}));
 
 document.addEventListener("keydown", function (event) {
   makeSound(event.key);
   buttonAnimation(event.key);
 });
-
-
-
-document.addEventListener("click", function (event){
-   console.log(event.target);
-})
 
 function buttonAnimation(currentKey){
     let activeKey = document.querySelector("." + currentKey);    
