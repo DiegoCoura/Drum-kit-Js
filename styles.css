@@ -19,13 +19,15 @@ body,html {
 }
 
 .key {
+  z-index: 4;
   border: .4rem solid black;
   border-radius: .5rem;
   margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem .5rem;
   transition: all .07s ease;
-  width: 10rem;
+  width: 100px;
+  height: 90px;
   text-align: center;
   color: white;
   background: rgba(0,0,0,0.4);
@@ -43,7 +45,7 @@ kbd {
   font-size: 4rem;
 }
 
-.sound {
+button span {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: .1rem;
